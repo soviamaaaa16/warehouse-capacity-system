@@ -19,3 +19,6 @@ Route::get('dashboard', function () {
 Route::get('login', function () {
     return view('login');
 });
+Route::get('denah', function () {
+    return view('denah');
+});
