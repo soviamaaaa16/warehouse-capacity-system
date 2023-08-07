@@ -22,3 +22,15 @@ Route::get('login', function () {
 Route::get('denah', function () {
     return view('denah');
 });
+Route::get('wire', function () {
+    return view('wire');
+});
+Route::get('connector', function () {
+    return view('connector');
+});
+Route::get('terminal', function () {
+    return view('terminal');
+});
+Route::get('assy', function () {
+    return view('assy');
+});

@@ -19,74 +19,9 @@
     <link href="../assets/css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="../assets/css/demo.css" rel="stylesheet" />
+    <link href="../assets/css/denah.css" rel="stylesheet" />
 </head>
-<style>
 
-    h2 {
-    text-align: center;
-    padding: 10px
-    }
-
-    div.gallery {
-    border: 1.5px solid #ccc;
-    justify-content: center;
-    align-items: center;
-    width: 130px;
-
-    }
-
-    div.gallery:hover {
-    
-    background-color: #D9D9D9;
-    }
-
-    div.gallery img {
-    width: 20;
-    height: 20;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    }
-
-    
-    div.desc {
-    padding: 15px;
-    text-align: center;
-    }
-
-    * {
-    box-sizing: border-box;
-    }
-
-    .responsive {
-    padding: 15px;
-    float: left;
-    width: 20%;
-    pointer-events: auto;
-    
-    }
-
-    @media only screen and (max-width: 700px) {
-    .responsive {
-        width: 10%;
-        margin: 10px 0;
-    }
-    }
- 
-    @media only screen and (max-width: 500px) {
-    .responsive {
-        width: 100%;
-    }
-    }
-
-    .clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
-    }
-    
-    </style>
 
     @section('content')
     <body>
@@ -96,7 +31,7 @@
 
     <div class="responsive">
     <div class="gallery">
-        <a target="_blank" href="../assets/img/wire.png">
+    <a href="wire">
         <img src="../assets/img/wire.png" alt="Wire" width="50" height= "50">
         </a>
         <div class="desc">Wire</div>
@@ -106,25 +41,25 @@
 
     <div class="responsive">
     <div class="gallery">
-        <a target="_blank" href="../assets/img/connector.png">
+    <a href="connector">
         <img src="../assets/img/connector.png" alt="Connector" width="50" height= "50">
         </a>
-        <div class="desc">connector</div>
+        <div class="desc">Connector</div>
     </div>
     </div>
 
     <div class="responsive">
     <div class="gallery">
-        <a target="_blank" href="../assets/img/terminal.png">
+        <a href="terminal">
         <img src="../assets/img/terminal.png" alt="Terminal" width="50" height= "50">
         </a>
-        <div class="desc">terminal</div>
+        <div class="desc">Terminal</div>
     </div>
     </div>
 
     <div class="responsive">
     <div class="gallery">
-        <a target="_blank" href="../assets/img/assy.png">
+        <a href="assy">
         <img src="../assets/img/assy.png" alt="Assy" width="50" height= "50">
         </a>
         <div class="desc">Assy</div>
