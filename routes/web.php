@@ -14,6 +14,3 @@ Route::get('/dashboard', [ChartController::class,'showChart']);
 Route::resource('/rak', RakController::class);
 
 Route::resource('/material', MaterialController::class);
-
-//API
-//Route::resource('api/home', ['controller' => 'Api\Home']);
