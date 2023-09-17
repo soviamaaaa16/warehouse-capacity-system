@@ -1,24 +1,14 @@
 <?php
 
+use App\Http\Controllers\ChartController;
+use App\Http\Controllers\MaterialController;
+use App\Http\Controllers\RakController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-Route::get('dashboard', function () {
-    return view('dashboard');
-});
 Route::get('login', function () {
     return view('login');
 });
+<<<<<<< HEAD
 Route::get('denah', function () {
     return view('denah');
 });
@@ -37,3 +27,11 @@ Route::get('assy', function () {
 Route::get('tes', function () {
     return view('tes');
 });
+=======
+
+Route::get('/dashboard', [ChartController::class,'showChart']);
+
+Route::resource('/rak', RakController::class);
+
+Route::resource('/material', MaterialController::class);
+>>>>>>> e8aada1a858d1939bc0f85a429fb988ce4531e41

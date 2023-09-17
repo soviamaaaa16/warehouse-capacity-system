@@ -73,7 +73,7 @@ p,
 a,
 .td-name,
 td,
-button.close {
+button.close, .sub-item {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
@@ -426,9 +426,9 @@ body>.navbar-collapse .nav {
     display: block;
 }
 
-.sidebar .nav li .nav-link,
+.sidebar .nav li .nav-link .sub-item,
 body>.navbar-collapse .nav li .nav-link {
-    color: #FFFFFF;
+    color: #8d1a1a;
     margin: 5px 15px;
     opacity: .86;
     border-radius: 4px;
@@ -474,7 +474,7 @@ body>.navbar-collapse .nav li:hover .nav-link {
     opacity: 1;
 } */
 
-.sidebar .nav li.active > .nav-link,
+.sidebar .nav li.active >  .nav-link,
 body>.navbar-collapse .nav li.active > .nav-link {
     color: #FFFFFF;
     opacity: 1;
@@ -512,7 +512,7 @@ body>.navbar-collapse .nav .active-pro a {
 }
 
 .sidebar .nav .nav-link,
-body>.navbar-collapse .nav .nav-link {
+body>.navbar-collapse .nav .nav-link .sub-menu .sub-item{
     color: #FFFFFF;
     margin: 5px 15px;
     opacity: .86;
@@ -521,6 +521,8 @@ body>.navbar-collapse .nav .nav-link {
     line-height: 30px;
     font-size: 12px;
     font-weight: 600;
+
+    sidebar tulisan;
 }
 
 .sidebar .logo,
@@ -1978,7 +1980,8 @@ fieldset[disabled] .form-control {
 }
 
 .nav .nav-item .nav-link:hover,
-.nav .nav-item .nav-link:focus {
+.nav .nav-item .nav-link:focus,
+.nav .nav-item .sub-menu .sub-item:focus{
     background-color: transparent;
 }
 
@@ -2039,7 +2042,7 @@ fieldset[disabled] .form-control {
     margin: 4px auto;
 }
 
-.navbar .navbar-nav .nav-item .nav-link {
+.navbar .navbar-nav .nav-item .nav-link .sub-menu {
     color: #888888;
     padding: 10px 15px;
     margin: 10px 3px;
