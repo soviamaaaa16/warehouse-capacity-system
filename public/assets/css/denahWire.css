@@ -29,6 +29,14 @@ h2 {
     
 }
 
+.left-table-b,
+.right-table-b {
+    width: 75%; /* Adjust as needed */
+    padding: 20px;
+    margin-right: 650px;
+    
+}
+
 .table {
     width: 75%; /* Adjust as needed */
     padding: 20px;

@@ -1,0 +1,48 @@
+/* Gaya dasar untuk halaman HTML */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+/* Gaya untuk denah warehouse */
+.warehouse {
+    width: 300px; /* Ubah sesuai kebutuhan lebar denah */
+    height: 200px; /* Ubah sesuai kebutuhan tinggi denah */
+    margin: 0 auto;
+    position: relative;
+    background-color: #f5f5f5;
+}
+
+/* Gaya untuk setiap ruangan dalam warehouse */
+.room {
+    width: 50px; /* Ubah sesuai kebutuhan lebar ruangan */
+    height: 50px; /* Ubah sesuai kebutuhan tinggi ruangan */
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    border: 1px solid #2980b9;
+}
+
+/* Penataan posisi ruangan dalam warehouse */
+.room:nth-child(1) {
+    top: 30px;
+    left: 30px;
+}
+
+.room:nth-child(2) {
+    top: 30px;
+    right: 30px;
+}
+
+.room:nth-child(3) {
+    bottom: 30px;
+    left: 30px;
+}
+
+.room:nth-child(4) {
+    bottom: 30px;
+    right: 30px;
+}

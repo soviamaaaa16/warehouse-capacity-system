@@ -34,3 +34,6 @@ Route::get('terminal', function () {
 Route::get('assy', function () {
     return view('assy');
 });
+Route::get('tes', function () {
+    return view('tes');
+});
