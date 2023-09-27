@@ -15,5 +15,6 @@ Route::resource('/rak', RakController::class);
 
 Route::resource('/material', MaterialController::class);
 
-//API
-//Route::resource('api/home', ['controller' => 'Api\Home']);
+Route::get('/getData', [MaterialController::class, 'getData']);
+
+Route::get('/getRak', [RakController::class, 'getRak']);

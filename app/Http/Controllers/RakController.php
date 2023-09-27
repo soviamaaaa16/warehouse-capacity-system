@@ -11,9 +11,16 @@ use Illuminate\Support\Facades\Schema;
 class RakController extends Controller
 {
     public function index(){
-        $partnum = DB::table('mainData')->get();
+        $alamat = DB::table('Rak')->get();
         
-        return view('/rak', compact('partnum'));
+        return view('/rak', compact('alamat'));
+    }
+
+    public function getRak(Request $request){
+        $alamat = $request->input('alamat');
+
+        $data = rak::where('alamat', $request->alamat)->first();
+        return response()->json($data);
     }
 
 }

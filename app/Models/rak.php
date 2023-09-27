@@ -9,24 +9,17 @@ class rak extends Model
 {
     use HasFactory;
 
-    protected $table = 'partNumber';
-
-    protected $primaryKey = 'id';
+    protected $table = 'Rak';
 
     protected $fillable = [
-        'itemNumber',
-        'partNumber',
-        'productName',
+        'kode',
+        'alamat',
         'pjg',
         'lbr',
         'tng',
-        'jr',
+        'tngAtas',
+        'tngTotal',
         'vol',
-        'qtyBox',
-        'qtyPack',
-        'berat',
-        'updated_at',
-
     ];
 
     public function rak(){

@@ -7,6 +7,8 @@
     <meta charset="utf-8" />
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="../assets/img/ipg-logo.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/ipg-logo.png">
+    <link rel="icon" type="image/png" href="../assets/img/ipg-logo.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Dashboard</title>
     <script src="{{ asset('assets/js/Chart.js') }}"></script>
