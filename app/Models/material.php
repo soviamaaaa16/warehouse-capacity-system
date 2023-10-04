@@ -9,7 +9,7 @@ class material extends Model
 {
     use HasFactory;
 
-    protected $table = 'mainData';
+    protected $table = 'successdata';
 
     protected $primaryKey = 'itemNumber';
 

@@ -10,7 +10,7 @@ use DB;
 class MaterialController extends Controller
 {
     public function index(){
-        $itemnum = DB::table('mainData')->get();
+        $itemnum = DB::table('successdata')->get();
         
         return view('/material', compact('itemnum'));
     }

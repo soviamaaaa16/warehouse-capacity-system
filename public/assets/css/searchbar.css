@@ -1,0 +1,37 @@
+.search-container {
+    position: absolute;
+    top: 650px; /* Atur jarak dari atas sesuai kebutuhan */
+    left: 15px; /* Atur jarak dari kiri sesuai kebutuhan */
+    width: 200px;
+}
+
+.searchForm input[type="submit"] {
+    display: none;
+}
+
+.search-container1 {
+    position: absolute;
+    top: 650px; /* Atur jarak dari atas sesuai kebutuhan */
+    left: 275px; /* Atur jarak dari kiri sesuai kebutuhan */
+    
+}
+
+.search-container2 {
+    position: absolute;
+    top: 650px; /* Atur jarak dari atas sesuai kebutuhan */
+    right: 275px; /* Atur jarak dari kiri sesuai kebutuhan */
+    
+}
+
+.search-container3 {
+    position: absolute;
+    top: 650px; /* Atur jarak dari atas sesuai kebutuhan */
+    right: 15px; /* Atur jarak dari kiri sesuai kebutuhan */
+    
+}
+
+/* Opsi tambahan: styling untuk input dan tombol */
+.search-container input[type="text"],
+.search-container input[type="submit"] {
+    /* Tambahkan gaya sesuai kebutuhan */
+}

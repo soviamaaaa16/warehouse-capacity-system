@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Schema;
 class RakController extends Controller
 {
     public function index(){
-        $partnum = DB::table('mainData')->get();
+        $partnum = DB::table('successdata')->get();
         
         return view('/rak', compact('partnum'));
     }

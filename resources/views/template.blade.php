@@ -77,17 +77,11 @@
                 </div>
             </nav>
             <!-- End Navbar -->
-
             <!-- Content -->
             @yield('content')
             <!-- End Content -->
-<<<<<<< HEAD
 
-
-=======
-            
             <!-- Footer
->>>>>>> e8aada1a858d1939bc0f85a429fb988ce4531e41
             <footer class="footer">
                 <div class="container-fluid">
                     <nav>
@@ -122,14 +116,11 @@
 <!-- Control Center for Light Bootstrap Dashboard: scripts for the example pages etc -->
 <script src="../assets/js/light-bootstrap-dashboard.js?v=2.0.0 " type="text/javascript"></script>
 <!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
-<<<<<<< HEAD
 <script src="../assets/js/demo.js"></script>
-=======
-<script src="{{asset('assets/js/demo.js')}}"></script>
 <script src="../assets/js/Chart.js"></script>
 
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <link href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css"/>
->>>>>>> e8aada1a858d1939bc0f85a429fb988ce4531e41
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 </html>

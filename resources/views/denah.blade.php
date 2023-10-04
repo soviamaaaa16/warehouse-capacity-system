@@ -1,153 +1,106 @@
 @extends('template')
 
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
+    <link rel="icon" type="image/png" href="../assets/img/ipg-logo.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/ipg-logo.png">
+    <link rel="icon" type="image/png" href="../assets/img/ipg-logo.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Denah Rak Warehouse</title>
+    <title>Dashboard</title>
+    <script src="{{ asset('assets/js/Chart.js') }}"></script>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
     <!-- CSS Files -->
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="../assets/css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet" />
-    <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="../assets/css/demo.css" rel="stylesheet" />
-    <link href="../assets/css/denah.css" rel="stylesheet" />
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/light-bootstrap-dashboard.css?v=2.0.0') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/charts.css') }}" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/style1.css">
+    <link rel="stylesheet" href="../assets/css/searchbar.css">
 </head>
+
 
 
     @section('content')
     <body>
 
-    <h2>Denah Rak Warehouse</h2>
-    
-
-    <div class="responsive">
-    <div class="gallery">
-    <a href="wire">
-        <img src="../assets/img/wire.png" alt="Wire" width="50" height= "50">
-        </a>
-        <div class="desc">Wire</div>
-    </div>
+    <div class="h2" >
+        <h2>Denah Rak Warehouse</h2>
     </div>
 
+    <div class="warehouse">
+        <div class="room" id="room1">Loket 1</div>
+        <div class="room" id="room2">Area CNC Produksi </div>
+        <div class="room" id="room3">Area Substore<br> Wire Produksi </div>
+        <div class="room" id="room4">Area Sub dan Meterial</div>
+        <div class="room" id="room5">Area Transit A 28 Pallet </div>
+        <div class="room" id="room6"> </div>
+        <div class="room" id="room7">QC Incoming </div>
+        <div class="room" id="room8">Admin Incoming </div>
+        <div class="room" id="room9">Area Kanban </div>
+        <div class="room" id="room10">Rak A (Wire) </div>
+        <div class="room" id="room11">Rak A (Wire) </div>
+        <div class="room" id="room12">Rak Kanban </div>
+        <div class="room" id="room13">Rak B (Wire) </div>
+        <div class="room" id="room14">Rak B (Wire) </div>
+        <div class="room" id="room15">Rak C (Accessoris) </div>
+        <div class="room" id="room16">Rak C (Assy) </div>
+        <div class="room" id="room17">Rak D (Terminal) </div>
+        <div class="room" id="room18">Rak D (Terminal) </div>
+        <div class="room" id="room19">Area Wire Batterey Cable 12 Pallet </div>
+        <div class="room" id="room20">Rak E (Terminal) </div>
+        <div class="room" id="room21">Rak E (Terminal) </div>
+        <div class="room" id="room22">Material RN </div>
+        <div class="room" id="room23">Rak F (Sub Assy) </div>
+        <div class="room" id="room24">Rak F (Sub Assy) </div>
+        <div class="room" id="room25">Material RN </div>
+        <div class="room" id="room26">Rak G (Sub Assy) </div>
+        <div class="room" id="room27">Rak G (Sub Assy) </div>
+        <div class="room" id="room28">Rak H (Sub Assy) </div>
+        <div class="room" id="room29">Area Transit GOEI </div>
+        <div class="room" id="room30">Rak I (Material Deadstok) </div>
+        <div class="room" id="room31">Area Transit B </div>
+        <div class="room" id="room32">Parkir Forklift </div>
+        <div class="room" id="room33">Rak K CS/IS<br> Rak K Sub Material </div>
+        <div class="room" id="room34">Area CS/IS 30 Pallet </div>
+        <div class="room" id="room35">Area Material Preparation </div>
+        <div class="room" id="room36">Area Cutting Tube </div>
+        <div class="room" id="room37">Area Tube<br> Rak L </div>
+        <div class="room" id="room38">Area Tapping <br> Rak J </div>
+        <div class="room" id="room39">Workshop Area </div>
 
-    <div class="responsive">
-    <div class="gallery">
-    <a href="connector">
-        <img src="../assets/img/connector.png" alt="Connector" width="50" height= "50">
-        </a>
-        <div class="desc">Connector</div>
-    </div>
-    </div>
-
-    <div class="responsive">
-    <div class="gallery">
-        <a href="terminal">
-        <img src="../assets/img/terminal.png" alt="Terminal" width="50" height= "50">
-        </a>
-        <div class="desc">Terminal</div>
-    </div>
-    </div>
-
-    <div class="responsive">
-    <div class="gallery">
-        <a href="assy">
-        <img src="../assets/img/assy.png" alt="Assy" width="50" height= "50">
-        </a>
-        <div class="desc">Assy</div>
-    </div>
-    </div>
-
-    <div class="responsive">
-    <div class="gallery">
-        <a target="_blank" href="../assets/img/sub-assy.png">
-        <img src="../assets/img/sub-assy.png" alt="Sub-Assy" width="50" height= "50">
-        </a>
-        <div class="desc">Sub-Assy</div>
-    </div>
-    </div>
-    
-    <div class="responsive">
-    <div class="gallery">
-        <a target="_blank" href="../assets/img/transit.png">
-        <img src="../assets/img/transit.png" alt="Transit" width="50" height= "50">
-        </a>
-        <div class="desc">Transit</div>
-    </div>
     </div>
 
-    <div class="responsive">
-    <div class="gallery">
-        <a target="_blank" href="../assets/img/preparation mat.png">
-        <img src="../assets/img/preparation mat.png" alt="Preparation Material width="50" height= "50">
-        </a>
-        <div class="desc">Preparation</div>
-    </div>
+    <div class="search-container">
+        <form id="searchItemnum" action="">
+              
+            <input type="text" id="searchInput" name="search" placeholder="Search Item Number...">
+        </form>
     </div>
 
-    <div class="responsive">
-    <div class="gallery">
-        <a target="_blank" href="../assets/img/deadstock.png">
-        <img src="../assets/img/csis.png" alt="Deadstock" width="50" height= "50">
-        </a>
-        <div class="desc">Deadstock</div>
-    </div>
+    <div class="search-container1">
+        <form id="searchForm" method="post" action="">
+            <input type="text" id="searchInput" name="search" placeholder="Search Product Name...">
+        </form>
     </div>
 
-    <div class="responsive">
-    <div class="gallery">
-        <a target="_blank" href="../assets/img/csis.png">
-        <img src="../assets/img/csis.png" alt="CS/IS" width="50" height= "50">
-        </a>
-        <div class="desc">CS/IS</div>
-    </div>
+    <div class="search-container2">
+        <form id="searchForm" method="post" action="">
+            <input type="text" id="searchInput" name="search" placeholder="Search Code Product...">
+        </form>
     </div>
 
-    <div class="responsive">
-    <div class="gallery">
-        <a target="_blank" href="../assets/img/material rn.png">
-        <img src="../assets/img/cutting.png" alt="Matarial RN" width="50" height= "50">
-        </a>
-        <div class="desc">Material RN</div>
-    </div>
+   
+
+    <div id="result">
+        <!-- Hasil pencarian akan ditampilkan di sini -->
     </div>
 
-    
-
-    <div class="responsive">
-    <div class="gallery">
-        <a target="_blank" href="../assets/img/cutting.png">
-        <img src="../assets/img/cutting.png" alt="Cutting" width="50" height= "50">
-        </a>
-        <div class="desc">Cutting</div>
-    </div>
-    </div>
-
-    <div class="responsive">
-    <div class="gallery">
-        <a target="_blank" href="../assets/img/tubes.png">
-        <img src="../assets/img/tubes.png" alt="Tubes" width="50" height= "50">
-        </a>
-        <div class="desc">Tube</div>
-    </div>
-    </div>
-
-    <div class="responsive">
-    <div class="gallery">
-        <a target="_blank" href="../assets/img/tubes.png">
-        <img src="../assets/img/tubes.png" alt="Tubes" width="50" height= "50">
-        </a>
-        <div class="desc">Tapping</div>
-    </div>
-    </div>
 
     <div class="clearfix"></div>
 
