@@ -11,9 +11,9 @@ class material extends Model
 
     protected $table = 'successdata';
 
-    protected $primaryKey = 'itemNumber';
+    //protected $primaryKey = 'itemNumber';
 
-    protected $allowedFields = [
+    protected $fillable = [
         'itemNumber',
         'partNumber',
         'productName',
@@ -26,7 +26,6 @@ class material extends Model
         'qtyPack',
         'berat',
         'updated_time',
-
     ];
 
     public function material(){

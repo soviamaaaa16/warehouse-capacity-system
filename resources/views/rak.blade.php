@@ -16,6 +16,10 @@
     <!-- CSS Files -->
     <link href="../assets/css/rak.css" rel="stylesheet" />
     <link href="../assets/css/additional.css" rel="stylesheet" />
+    <script src="../assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+    <script src="../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
 
 @section('content')
@@ -24,30 +28,30 @@
     <div class="content">
             <form class="form-horizontal">
                       <div class="form-group row">
-                        <label for="inputAlamat" class="col-sm-2 col-form-label">Rak</label>
-                        <select id="rak" name="rak">
+                        <label for="rak" class="col-sm-2 col-form-label">Rak</label>
+                        <select id="rak" name="states[]" onchange="getAlamat()">
                           <option value=""> Select </option>   
-                          @foreach ($partnum as $row)     
-                            <option value="{{ $row->partNumber}}">{{ $row->partNumber }}</option>
+                          @foreach ($alamat as $row)     
+                            <option value="{{ $row->alamat}}">{{ $row->alamat }}</option>
                           @endforeach     
                         </select>
                       </div>
                       <div class="form-group row">
-                        <label for="insputPjg" class="col-sm-2 col-form-label">Panjang</label>
+                        <label for="inputPjg" class="col-sm-2 col-form-label">Panjang</label>
                         <div class="col-sm-10">
-                          <input type="text" class="form-control" id="inputPjg">
+                          <input type="text" class="form-control" id="panjang">
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="inputLbr" class="col-sm-2 col-form-label">Lebar</label>
                         <div class="col-sm-10">
-                          <input type="text" class="form-control" id="inputLbr">
+                          <input type="text" class="form-control" id="lebar">
                         </div>
                       </div>
                       <div class="form-group row">
                         <label for="inputTnggi" class="col-sm-2 col-form-label">Tinggi</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputTnggi">
+                            <input type="text" class="form-control" id="tinggi">
                         </div>
                       </div>
 
@@ -57,7 +61,38 @@
     </div>
 </body>
 
+<script>
+  function getAlamat(){
+  var alamat = $("#rak").val();
+  $.ajax({
+    url : "{{ url ('/getRak') }}",
+    type: 'get',
+    dataType: 'json',
+    data : {
+      alamat: alamat,
+    },
+    success : function(data){
+      if (data){
+        $('#panjang').val(data.pjg);
+        $('#lebar').val(data.lbr);
+        $('#tinggi').val(data.tngTotal);
+      } else {
+        echo ('no data was found');
+      }
+    }
+  });
+  }
+</script>
+
+<script>
+      $(document).ready(function() {
+        $("#rak").select2();
+    });
+</script>
+
 @endsection
+
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 </html>
             
